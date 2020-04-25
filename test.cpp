@@ -38,3 +38,8 @@ TEST_CASE("new deliminator"){
 TEST_CASE("negatives throw"){
    CHECK_THROWS_WITH(add("-3"), "negatives not allowed");
 }
+
+TEST_CASE("big nums"){
+    CHECK(add("1001,2") == 2);
+    CHECK(add("3000,2") == 2);
+}

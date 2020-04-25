@@ -19,7 +19,9 @@ int add(string input){
             throw "negatives not allowed";
             throw num;
         }
-        nums.push_back(num);
+        if(num <= 1000){
+            nums.push_back(num);
+        }
     }
     nums.pop_back();
     return std::accumulate(nums.begin(),nums.end(),0);
