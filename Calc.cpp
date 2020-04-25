@@ -21,10 +21,20 @@ int add(string input){
 }
 
 string parse(string input){
-    for(int i = 0; i < input.size(); ++i){
-        if(input[i] == ','){
-            input[i] = ' ';
+    string output = "";
+    for(int i = 0; i < input.size(); ++i)
+    {
+        if(input[i] == ',')
+        {
+            output.push_back(' ');
+        }
+        else if((input[i] == '\\') && (input[i+1] == 'n'))
+        {
+            output.push_back(' ');
+        }else
+        {
+            output.push_back(input[i]);
         }
     }
-    return input;
+    return output;
 }

@@ -24,3 +24,8 @@ TEST_CASE("alot of numbers added"){
     CHECK(add("7,7,7,7,7") == 35);
     CHECK(add("10,10,10,10,10,10,10,10") == 80);
 }
+
+TEST_CASE("newlines"){
+    CHECK(add("7\n2") == 9);
+    CHECK(add("82\n2,2") == 86);
+}
