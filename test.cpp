@@ -14,3 +14,8 @@ TEST_CASE("single mun return the num"){
     CHECK(add("7") == 7);
     CHECK(add("82") == 82);
 }
+
+TEST_CASE("two imput is added"){
+    CHECK(add("7,2") == 9);
+    CHECK(add("82,2") == 84);
+}
