@@ -14,6 +14,11 @@ int add(string input){
     {
         sm >> num;
         //sm >> waste;
+        if(num < 0)
+        {
+            throw "negatives not allowed";
+            throw num;
+        }
         nums.push_back(num);
     }
     nums.pop_back();

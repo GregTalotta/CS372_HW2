@@ -34,3 +34,7 @@ TEST_CASE("new deliminator"){
     CHECK(add("//;\n1;2") == 3);
     CHECK(add("//a\n1a2") == 3);
 }
+
+TEST_CASE("negatives throw"){
+   CHECK_THROWS_WITH(add("-3"), "negatives not allowed");
+}
