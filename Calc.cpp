@@ -22,9 +22,14 @@ int add(string input){
 
 string parse(string input){
     string output = "";
+    char delim = ',';
+    if(input.substr(0,2) == "//"){
+        delim = input[2];
+        input = input.substr(4, input.size()-3);
+    }
     for(int i = 0; i < input.size(); ++i)
     {
-        if(input[i] == ',')
+        if(input[i] == delim)
         {
             output.push_back(' ');
         }

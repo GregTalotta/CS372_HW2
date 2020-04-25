@@ -29,3 +29,8 @@ TEST_CASE("newlines"){
     CHECK(add("7\n2") == 9);
     CHECK(add("82\n2,2") == 86);
 }
+
+TEST_CASE("new deliminator"){
+    CHECK(add("//;\n1;2") == 3);
+    CHECK(add("//a\n1a2") == 3);
+}
