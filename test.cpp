@@ -19,3 +19,8 @@ TEST_CASE("two imput is added"){
     CHECK(add("7,2") == 9);
     CHECK(add("82,2") == 84);
 }
+
+TEST_CASE("alot of numbers added"){
+    CHECK(add("7,7,7,7,7") == 35);
+    CHECK(add("10,10,10,10,10,10,10,10") == 80);
+}
